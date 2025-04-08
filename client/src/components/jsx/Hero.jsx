@@ -44,6 +44,48 @@ const Hero = () => {
             >
               A Chrome extension to track, organize, and save your notes effortlessly - all synced with Google Sheets.
             </motion.p>
+            
+            <motion.div 
+              className="mt-6 flex flex-col space-y-4"
+              variants={itemVariants}
+            >
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/20 p-2 rounded-full mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Highlights keywords you want to track</h3>
+                  <p className="text-sm text-muted-foreground">Never miss important information while browsing</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/20 p-2 rounded-full mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Makes note-taking organized and seamless</h3>
+                  <p className="text-sm text-muted-foreground">Smart categories and intuitive organization</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="bg-primary/20 p-2 rounded-full mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Backed up in Google Sheets</h3>
+                  <p className="text-sm text-muted-foreground">Private, secure and accessible anytime</p>
+                </div>
+              </div>
+            </motion.div>
+            
             <motion.div 
               className="mt-8 flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4"
               variants={itemVariants}
@@ -93,7 +135,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative w-full max-w-md">
-              <div className="absolute -top-6 -right-6 w-40 h-40 bg-indigo-400 rounded-full opacity-20 blur-3xl"></div>
+              <div className="absolute -top-6 -right-6 w-40 h-40 bg-teal-400 rounded-full opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-10 -left-6 w-40 h-40 bg-primary rounded-full opacity-20 blur-3xl"></div>
               
               <motion.div 
@@ -112,7 +154,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="p-5">
-                  <div className="aspect-video bg-background rounded-lg flex items-center justify-center">
+                  <div className="aspect-video bg-background rounded-lg flex items-center justify-center placeholder-pulse">
                     <div className="text-center px-4">
                       <div className="w-12 h-12 bg-card rounded-full mx-auto flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">

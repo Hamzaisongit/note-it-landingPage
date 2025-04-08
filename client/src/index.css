@@ -10,6 +10,40 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  
+  /* Add WhatsApp-like color scheme */
+  :root {
+    --background: 220 17% 10%; /* Very dark gray with slight blue tint */
+    --foreground: 210 40% 98%; /* Near white */
+ 
+    --muted: 220 17% 17%;
+    --muted-foreground: 215 20% 75%;
+ 
+    --popover: 220 17% 13%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --card: 220 17% 14%; /* Slightly lighter than background */
+    --card-foreground: 210 40% 98%;
+ 
+    --border: 220 17% 20%;
+    --input: 220 17% 20%;
+ 
+    --primary: 142 70% 49%; /* WhatsApp green */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 170 70% 40%; /* Teal accent */
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 142 70% 49%; /* Same as primary */
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+ 
+    --ring: 220 17% 35%;
+ 
+    --radius: 0.5rem;
+  }
 }
 
 /* Global styles */
@@ -25,7 +59,7 @@
 }
 
 .placeholder-pulse {
-  background: linear-gradient(90deg, rgba(30,30,30,0.7) 25%, rgba(40,40,40,0.8) 50%, rgba(30,30,30,0.7) 75%);
+  background: linear-gradient(90deg, rgba(25,25,30,0.8) 25%, rgba(35,35,40,0.9) 50%, rgba(25,25,30,0.8) 75%);
   background-size: 200% 100%;
   animation: placeholderPulse 1.5s infinite linear;
 }
@@ -37,4 +71,9 @@
   100% {
     background-position: -200% 0%;
   }
+}
+
+.card-hover {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

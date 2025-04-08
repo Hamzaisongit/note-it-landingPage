@@ -12,25 +12,28 @@ const Features = () => {
       description: "Highlights the keywords you want to track across any webpage, making important information instantly visible.",
       colorClass: "bg-primary/20",
       iconColorClass: "text-primary",
-      gifPlaceholder: "Keyword Highlighting Demo"
+      gifPlaceholder: "Keyword Highlighting Demo",
+      detailedDescription: "Never miss important information again. NoteZap automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website."
     },
     {
       id: 2,
-      icon: <FolderKanban className="h-8 w-8 text-indigo-400" />,
+      icon: <FolderKanban className="h-8 w-8 text-teal-400" />,
       title: "Seamless Organization",
       description: "Makes note-taking organized and seamless with smart categories, tags, and an intuitive interface.",
-      colorClass: "bg-indigo-400/20",
-      iconColorClass: "text-indigo-400",
-      gifPlaceholder: "Organization System Demo"
+      colorClass: "bg-teal-400/20",
+      iconColorClass: "text-teal-400",
+      gifPlaceholder: "Organization System Demo",
+      detailedDescription: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters."
     },
     {
       id: 3,
-      icon: <FileSpreadsheet className="h-8 w-8 text-purple-400" />,
+      icon: <FileSpreadsheet className="h-8 w-8 text-primary" />,
       title: "Secure Google Sheets Backup",
       description: "All your notes are backed up in a Google Sheet – backed up and private to you, accessible anytime.",
-      colorClass: "bg-purple-400/20",
-      iconColorClass: "text-purple-400",
-      gifPlaceholder: "Google Sheets Integration Demo"
+      colorClass: "bg-primary/20",
+      iconColorClass: "text-primary",
+      gifPlaceholder: "Google Sheets Integration Demo",
+      detailedDescription: "Your notes are automatically backed up to your private Google Sheet. Access them from any device, anytime, with the security and convenience you need."
     }
   ];
 
@@ -64,6 +67,7 @@ const Features = () => {
                 colorClass={feature.colorClass}
                 iconColorClass={feature.iconColorClass}
                 gifPlaceholder={feature.gifPlaceholder}
+                detailedDescription={feature.detailedDescription}
               />
             </motion.div>
           ))}
