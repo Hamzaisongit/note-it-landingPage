@@ -46,47 +46,6 @@ const Hero = () => {
             </motion.p>
             
             <motion.div 
-              className="mt-6 flex flex-col space-y-4"
-              variants={itemVariants}
-            >
-              <div className="flex items-start gap-3">
-                <div className="bg-primary/20 p-2 rounded-full mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Highlights keywords you want to track</h3>
-                  <p className="text-sm text-muted-foreground">Never miss important information while browsing</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="bg-primary/20 p-2 rounded-full mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Makes note-taking organized and seamless</h3>
-                  <p className="text-sm text-muted-foreground">Smart categories and intuitive organization</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <div className="bg-primary/20 p-2 rounded-full mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-primary" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Backed up in Google Sheets</h3>
-                  <p className="text-sm text-muted-foreground">Private, secure and accessible anytime</p>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
               className="mt-8 flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4"
               variants={itemVariants}
             >

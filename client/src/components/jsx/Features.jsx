@@ -1,39 +1,55 @@
 import React from "react";
-import FeatureCard from "./FeatureCard";
 import { Highlighter, FolderKanban, FileSpreadsheet } from "lucide-react";
 import { motion } from "framer-motion";
+
+const FeatureCard = ({ icon, title, description, colorClass, gifPlaceholder }) => {
+  return (
+    <motion.div 
+      className="bg-card rounded-xl p-6 shadow-lg border border-border overflow-hidden"
+      whileHover={{ y: -10, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" }}
+    >
+      <div className={`${colorClass} w-16 h-16 rounded-lg mb-6 flex items-center justify-center`}>
+        {icon}
+      </div>
+      
+      <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
+      <p className="text-muted-foreground mb-6">{description}</p>
+      
+      <div className="aspect-video rounded-lg overflow-hidden flex items-center justify-center placeholder-pulse">
+        <div className="text-center text-muted-foreground">
+          <p className="font-medium">GIF Placeholder:</p>
+          <p className="text-sm">{gifPlaceholder}</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Features = () => {
   const features = [
     {
       id: 1,
       icon: <Highlighter className="h-8 w-8 text-primary" />,
-      title: "Smart Keyword Tracking",
-      description: "Highlights the keywords you want to track across any webpage, making important information instantly visible.",
+      title: "Highlights keywords you want to track",
+      description: "Never miss important information again. NoteZap automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website.",
       colorClass: "bg-primary/20",
-      iconColorClass: "text-primary",
-      gifPlaceholder: "Keyword Highlighting Demo",
-      detailedDescription: "Never miss important information again. NoteZap automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website."
+      gifPlaceholder: "Keyword Highlighting Demo"
     },
     {
       id: 2,
       icon: <FolderKanban className="h-8 w-8 text-teal-400" />,
-      title: "Seamless Organization",
-      description: "Makes note-taking organized and seamless with smart categories, tags, and an intuitive interface.",
+      title: "Makes note-taking organized and seamless",
+      description: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters.",
       colorClass: "bg-teal-400/20",
-      iconColorClass: "text-teal-400",
-      gifPlaceholder: "Organization System Demo",
-      detailedDescription: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters."
+      gifPlaceholder: "Organization System Demo"
     },
     {
       id: 3,
       icon: <FileSpreadsheet className="h-8 w-8 text-primary" />,
-      title: "Secure Google Sheets Backup",
-      description: "All your notes are backed up in a Google Sheet – backed up and private to you, accessible anytime.",
+      title: "All notes backed up in Google Sheets",
+      description: "Your notes are automatically backed up to your private Google Sheet. Access them from any device, anytime, with the security and convenience you need.",
       colorClass: "bg-primary/20",
-      iconColorClass: "text-primary",
-      gifPlaceholder: "Google Sheets Integration Demo",
-      detailedDescription: "Your notes are automatically backed up to your private Google Sheet. Access them from any device, anytime, with the security and convenience you need."
+      gifPlaceholder: "Google Sheets Integration Demo"
     }
   ];
 
@@ -47,7 +63,7 @@ const Features = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Smart Features for Better Notes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Key Features</h2>
           <p className="text-xl text-muted-foreground">NoteZap transforms how you capture, organize, and access information while browsing.</p>
         </motion.div>
         
@@ -65,9 +81,7 @@ const Features = () => {
                 title={feature.title}
                 description={feature.description}
                 colorClass={feature.colorClass}
-                iconColorClass={feature.iconColorClass}
                 gifPlaceholder={feature.gifPlaceholder}
-                detailedDescription={feature.detailedDescription}
               />
             </motion.div>
           ))}
