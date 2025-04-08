@@ -77,3 +77,28 @@
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Academic grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Improve text readability */
+p {
+  line-height: 1.7;
+}
+
+/* Consistent section spacing */
+section {
+  position: relative;
+  scroll-margin-top: 80px; /* For anchor links */
+}
+
+/* Improved focus states for accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

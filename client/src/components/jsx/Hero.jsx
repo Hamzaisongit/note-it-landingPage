@@ -22,12 +22,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-b from-background via-background/95 to-background/90">
+    <section className="pt-24 pb-16 md:pt-28 md:pb-20 bg-gradient-to-b from-background via-background/95 to-background/90">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
-          {/* Step 1: Headline and Subtitle - centered at top */}
+          {/* Headline and Subtitle - centered at top */}
           <motion.div 
-            className="text-center max-w-3xl mb-12"
+            className="text-center max-w-3xl mb-10 md:mb-14"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -40,7 +40,7 @@ const Hero = () => {
               <span className="text-primary">Note-Taking</span>
             </motion.h1>
             <motion.p 
-              className="mt-4 text-xl text-muted-foreground mb-6"
+              className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto"
               variants={itemVariants}
             >
               A Chrome extension to track, organize, and save your notes effortlessly - all synced with Google Sheets.
@@ -61,14 +61,14 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           
-          {/* Step 2: Large Demo Video Area */}
+          {/* Large Demo Video Area */}
           <motion.div 
-            className="w-full max-w-3xl mb-10"
+            className="w-full max-w-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-full">
+            <div className="relative w-full mx-auto">
               <div className="absolute -top-6 -right-6 w-40 h-40 bg-teal-400 rounded-full opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-10 -left-6 w-40 h-40 bg-primary rounded-full opacity-20 blur-3xl"></div>
               
@@ -87,7 +87,7 @@ const Hero = () => {
                     chrome-extension://note-it
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-4 md:p-6 lg:p-8">
                   {/* Large video placeholder area */}
                   <div className="aspect-video bg-background rounded-lg flex items-center justify-center placeholder-pulse">
                     <div className="text-center px-4">
