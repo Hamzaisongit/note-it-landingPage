@@ -24,9 +24,10 @@ const Hero = () => {
   return (
     <section className="pt-28 pb-20 bg-gradient-to-b from-background via-background/95 to-background/90">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col items-center">
+          {/* Step 1: Headline and Subtitle - centered at top */}
           <motion.div 
-            className="md:w-1/2 text-center md:text-left"
+            className="text-center max-w-3xl mb-12"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -39,14 +40,14 @@ const Hero = () => {
               <span className="text-primary">Note-Taking</span>
             </motion.h1>
             <motion.p 
-              className="mt-4 text-xl text-muted-foreground md:pr-12 mb-6"
+              className="mt-4 text-xl text-muted-foreground mb-6"
               variants={itemVariants}
             >
               A Chrome extension to track, organize, and save your notes effortlessly - all synced with Google Sheets.
             </motion.p>
             
             <motion.div 
-              className="mt-10 flex items-center space-x-4 justify-center md:justify-start mb-10"
+              className="flex items-center justify-center space-x-4 mt-8"
               variants={itemVariants}
             >
               <div className="flex -space-x-2">
@@ -60,13 +61,14 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           
+          {/* Step 2: Large Demo Video Area */}
           <motion.div 
-            className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center md:justify-end"
+            className="w-full max-w-3xl mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full">
               <div className="absolute -top-6 -right-6 w-40 h-40 bg-teal-400 rounded-full opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-10 -left-6 w-40 h-40 bg-primary rounded-full opacity-20 blur-3xl"></div>
               
@@ -85,38 +87,43 @@ const Hero = () => {
                     chrome-extension://notezap
                   </div>
                 </div>
-                <div className="p-5">
-                  {/* Larger video placeholder area */}
+                <div className="p-6">
+                  {/* Large video placeholder area */}
                   <div className="aspect-video bg-background rounded-lg flex items-center justify-center placeholder-pulse">
                     <div className="text-center px-4">
-                      <div className="w-16 h-16 bg-card rounded-full mx-auto flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="w-20 h-20 bg-card rounded-full mx-auto flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <p className="mt-4 text-muted-foreground text-lg font-medium">Demo Video Placeholder</p>
-                      <p className="text-sm text-muted-foreground mt-2">See NoteZap in action</p>
+                      <p className="mt-4 text-muted-foreground text-xl font-medium">Demo Video Placeholder</p>
+                      <p className="text-md text-muted-foreground mt-2">See NoteZap in action</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
-              
-              {/* Get Started button below the video */}
-              <div className="mt-6 flex justify-center">
-                <motion.a 
-                  href="#features" 
-                  className="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-8 rounded-lg shadow-lg shadow-primary/20 transition-all duration-200 flex items-center"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started
-                  <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </motion.a>
-              </div>
             </div>
+          </motion.div>
+          
+          {/* Step 3: Get Started button at the bottom */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-4 mb-8"
+          >
+            <motion.a 
+              href="#features" 
+              className="bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-10 rounded-lg shadow-lg shadow-primary/20 transition-all duration-200 flex items-center text-lg"
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </motion.a>
           </motion.div>
         </div>
       </div>
