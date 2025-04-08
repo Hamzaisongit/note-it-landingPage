@@ -1,0 +1,46 @@
+I need help creating a landing page for my note-taking Chrome extension. Below are the detailed requirements and constraints. Please provide a complete solution, including code snippets, library suggestions, and guidance, while addressing potential edge cases like responsiveness, browser compatibility, and performance. Here's what I need:
+
+Project Overview
+I’m building a landing page to promote my note-taking Chrome extension. The page should be visually appealing ('sexy'), structurally consistent, and easy to navigate. It will highlight three key features of the extension using provided GIFs. The tech stack must use React and vanilla JavaScript (no TypeScript). For animations and UI, recommend and use a popular, well-maintained library that suits this project.
+
+Specific Requirements
+Design Goals:
+The webpage should have a modern, 'sexy' aesthetic (e.g., sleek typography, vibrant colors, smooth transitions, and a polished look).
+The layout and structure should be consistent and even (e.g., equal spacing, aligned elements, a clear visual hierarchy).
+Ensure responsiveness across devices (mobile, tablet, desktop) with a mobile-first approach.
+Key Features to Highlight:
+Feature 1: 'Highlights the keywords you want to track.'
+Feature 2: 'Makes note-taking organized and seamless.'
+Feature 3: 'All your notes are backed up in a Google Sheet – backed up and private to you.'
+For each feature, include a section with:
+A short, catchy headline.
+A brief description (1-2 sentences).
+A placeholder for a GIF (I’ll provide the actual GIFs later; use a gray box with text like 'GIF Placeholder' for now).
+Tech Stack:
+Use React with vanilla JavaScript (no TypeScript).
+For animations and UI, recommend a popular library (e.g., Framer Motion, GSAP, Material-UI, or Tailwind CSS) that complements the 'sexy' design and feature GIFs. Justify your choice briefly.
+Keep the code modular, reusable, and well-commented.
+Structure:
+Header: A sticky navbar with the extension name (use 'NoteZap' as a placeholder) and a 'Download Now' CTA button linking to a dummy URL (# for now).
+Hero Section: A bold headline (e.g., 'Supercharge Your Note-Taking'), a subheadline (e.g., 'A Chrome extension to track, organize, and save your notes effortlessly'), and a 'Get Started' button.
+Features Section: Three feature cards or blocks showcasing the features above, with GIF placeholders.
+Footer: Simple footer with a placeholder copyright notice (e.g., '© 2025 NoteZap').
+Edge Cases to Address
+Responsiveness: Ensure the layout adapts smoothly to screen sizes (e.g., stack feature cards on mobile, adjust font sizes).
+GIF Handling: The GIFs I’ll provide may vary in size—ensure the design accommodates this without breaking layout consistency (e.g., use max-width or object-fit).
+Performance: Optimize animations to avoid lag, especially on lower-end devices.
+Browser Compatibility: Ensure the page works in Chrome, Firefox, and Edge (avoid Chrome-specific features).
+Accessibility: Add ARIA labels where needed and ensure sufficient color contrast for text and backgrounds.
+Loading States: Suggest a fallback (e.g., spinner or static image) if GIFs fail to load.
+Code Quality: Avoid hardcoding values (use variables or props); handle potential errors (e.g., missing GIFs).
+Deliverables
+A React component structure (e.g., App.js, Header.js, Hero.js, FeatureCard.js, Footer.js).
+CSS or styling solution (e.g., CSS modules, styled-components, or library-specific styles).
+Animation examples for the feature cards (e.g., fade-in on scroll, hover effects).
+Instructions to install and run the project locally (e.g., npm install, library setup).
+A brief explanation of your UI/animation library choice and how it fits the 'sexy' vibe.
+Constraints
+No TypeScript—stick to vanilla JS.
+Don’t assume I’ll provide specific GIF dimensions yet; make the design flexible.
+Avoid overcomplicating the codebase with unnecessary dependencies.
+Please provide a complete response with code, explanations, and any assumptions you make. If something’s unclear, ask me specific follow-up questions rather than guessing.
