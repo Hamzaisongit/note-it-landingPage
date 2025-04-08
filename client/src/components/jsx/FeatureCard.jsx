@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-// We need to create a .jsx file for this component
 const FeatureCard = (props) => {
   const {
     icon,

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Footer from "../components/Footer";
+import Header from "../components/jsx/Header";
+import Hero from "../components/jsx/Hero";
+import Features from "../components/jsx/Features";
+import Footer from "../components/jsx/Footer";
 
 const Home = () => {
   // Implement intersection observer for scroll animations
