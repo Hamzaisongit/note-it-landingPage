@@ -84,7 +84,7 @@ const Hero = () => {
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                   </div>
                   <div className="ml-4 py-1 px-3 rounded-md bg-card border border-border text-xs text-muted-foreground flex-grow text-center">
-                    chrome-extension://notezap
+                    chrome-extension://note-it
                   </div>
                 </div>
                 <div className="p-6">
@@ -98,32 +98,12 @@ const Hero = () => {
                         </svg>
                       </div>
                       <p className="mt-4 text-muted-foreground text-xl font-medium">Demo Video Placeholder</p>
-                      <p className="text-md text-muted-foreground mt-2">See NoteZap in action</p>
+                      <p className="text-md text-muted-foreground mt-2">See Note-it in action</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
             </div>
-          </motion.div>
-          
-          {/* Step 3: Get Started button at the bottom */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-4 mb-8"
-          >
-            <motion.a 
-              href="#features" 
-              className="bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-10 rounded-lg shadow-lg shadow-primary/20 transition-all duration-200 flex items-center text-lg"
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Started
-              <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </motion.a>
           </motion.div>
         </div>
       </div>

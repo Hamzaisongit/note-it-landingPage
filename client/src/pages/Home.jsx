@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../components/jsx/Header";
 import Hero from "../components/jsx/Hero";
 import Features from "../components/jsx/Features";
+import CTA from "../components/jsx/CTA";
 import Footer from "../components/jsx/Footer";
 
 const Home = () => {
@@ -37,6 +38,7 @@ const Home = () => {
       <Header />
       <Hero />
       <Features />
+      <CTA />
       <Footer />
     </div>
   );

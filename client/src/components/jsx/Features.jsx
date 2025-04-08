@@ -2,18 +2,22 @@ import React from "react";
 import { Highlighter, FolderKanban, FileSpreadsheet } from "lucide-react";
 import { motion } from "framer-motion";
 
-const FeatureCard = ({ icon, title, description, colorClass }) => {
+const FeatureCard = ({ icon, title, description, colorClass, isReversed }) => {
   return (
     <motion.div 
-      className="bg-card rounded-xl p-6 shadow-lg border border-border overflow-hidden h-full flex flex-col"
-      whileHover={{ y: -10, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" }}
+      className="bg-card rounded-xl p-6 md:p-8 shadow-lg border border-border overflow-hidden"
+      whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" }}
     >
-      <div className={`${colorClass} w-16 h-16 rounded-lg mb-6 flex items-center justify-center`}>
-        {icon}
+      <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-10 items-center`}>
+        <div className={`${colorClass} w-20 h-20 md:w-24 md:h-24 rounded-lg flex items-center justify-center flex-shrink-0`}>
+          {React.cloneElement(icon, { className: "h-12 w-12 md:h-14 md:w-14" })}
+        </div>
+        
+        <div className={`flex-1 ${isReversed ? 'md:text-right' : 'md:text-left'} text-center`}>
+          <h3 className="text-xl md:text-2xl font-semibold mb-3 text-foreground">{title}</h3>
+          <p className="text-muted-foreground text-base md:text-lg">{description}</p>
+        </div>
       </div>
-      
-      <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
     </motion.div>
   );
 };
@@ -22,24 +26,27 @@ const Features = () => {
   const features = [
     {
       id: 1,
-      icon: <Highlighter className="h-8 w-8 text-primary" />,
+      icon: <Highlighter className="text-primary" />,
       title: "Highlights keywords you want to track",
-      description: "Never miss important information again. NoteZap automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website.",
-      colorClass: "bg-primary/20"
+      description: "Never miss important information again. Note-it automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website.",
+      colorClass: "bg-primary/20",
+      isReversed: false
     },
     {
       id: 2,
-      icon: <FolderKanban className="h-8 w-8 text-teal-400" />,
+      icon: <FolderKanban className="text-teal-400" />,
       title: "Makes note-taking organized and seamless",
       description: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters.",
-      colorClass: "bg-teal-400/20"
+      colorClass: "bg-teal-400/20",
+      isReversed: true
     },
     {
       id: 3,
-      icon: <FileSpreadsheet className="h-8 w-8 text-primary" />,
+      icon: <FileSpreadsheet className="text-primary" />,
       title: "All notes backed up in Google Sheets",
       description: "Your notes are automatically backed up to your private Google Sheet. Access them from any device, anytime, with the security and convenience you need.",
-      colorClass: "bg-primary/20"
+      colorClass: "bg-primary/20",
+      isReversed: false
     }
   ];
 
@@ -54,23 +61,24 @@ const Features = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Key Features</h2>
-          <p className="text-xl text-muted-foreground">NoteZap transforms how you capture, organize, and access information while browsing.</p>
+          <p className="text-xl text-muted-foreground">Note-it transforms how you capture, organize, and access information while browsing.</p>
         </motion.div>
         
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="flex flex-col gap-10 md:gap-16 mt-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: feature.isReversed ? 30 : -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.7, delay: index * 0.1 }}
             >
               <FeatureCard
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
                 colorClass={feature.colorClass}
+                isReversed={feature.isReversed}
               />
             </motion.div>
           ))}
