@@ -2,10 +2,10 @@ import React from "react";
 import { Highlighter, FolderKanban, FileSpreadsheet } from "lucide-react";
 import { motion } from "framer-motion";
 
-const FeatureCard = ({ icon, title, description, colorClass, gifPlaceholder }) => {
+const FeatureCard = ({ icon, title, description, colorClass }) => {
   return (
     <motion.div 
-      className="bg-card rounded-xl p-6 shadow-lg border border-border overflow-hidden"
+      className="bg-card rounded-xl p-6 shadow-lg border border-border overflow-hidden h-full flex flex-col"
       whileHover={{ y: -10, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)" }}
     >
       <div className={`${colorClass} w-16 h-16 rounded-lg mb-6 flex items-center justify-center`}>
@@ -13,14 +13,7 @@ const FeatureCard = ({ icon, title, description, colorClass, gifPlaceholder }) =
       </div>
       
       <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
-      <p className="text-muted-foreground mb-6">{description}</p>
-      
-      <div className="aspect-video rounded-lg overflow-hidden flex items-center justify-center placeholder-pulse">
-        <div className="text-center text-muted-foreground">
-          <p className="font-medium">GIF Placeholder:</p>
-          <p className="text-sm">{gifPlaceholder}</p>
-        </div>
-      </div>
+      <p className="text-muted-foreground">{description}</p>
     </motion.div>
   );
 };
@@ -32,24 +25,21 @@ const Features = () => {
       icon: <Highlighter className="h-8 w-8 text-primary" />,
       title: "Highlights keywords you want to track",
       description: "Never miss important information again. NoteZap automatically highlights keywords you've set to track, helping you spot crucial details immediately while browsing any website.",
-      colorClass: "bg-primary/20",
-      gifPlaceholder: "Keyword Highlighting Demo"
+      colorClass: "bg-primary/20"
     },
     {
       id: 2,
       icon: <FolderKanban className="h-8 w-8 text-teal-400" />,
       title: "Makes note-taking organized and seamless",
       description: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters.",
-      colorClass: "bg-teal-400/20",
-      gifPlaceholder: "Organization System Demo"
+      colorClass: "bg-teal-400/20"
     },
     {
       id: 3,
       icon: <FileSpreadsheet className="h-8 w-8 text-primary" />,
       title: "All notes backed up in Google Sheets",
       description: "Your notes are automatically backed up to your private Google Sheet. Access them from any device, anytime, with the security and convenience you need.",
-      colorClass: "bg-primary/20",
-      gifPlaceholder: "Google Sheets Integration Demo"
+      colorClass: "bg-primary/20"
     }
   ];
 
@@ -81,7 +71,6 @@ const Features = () => {
                 title={feature.title}
                 description={feature.description}
                 colorClass={feature.colorClass}
-                gifPlaceholder={feature.gifPlaceholder}
               />
             </motion.div>
           ))}
