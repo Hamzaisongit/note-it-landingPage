@@ -19,7 +19,7 @@ const CTA = () => {
   });
 
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-background/80">
+    <section className="py-20 md:py-28 relative overflow-hidden bg-background/80 overflow-x-hidden">
       {/* Academic-style animation particles */}
       {particles.map((particle) => (
         <motion.div
@@ -47,14 +47,14 @@ const CTA = () => {
 
       {/* Academic decoration lines */}
       <motion.div
-        className="absolute h-[1px] bg-primary/15 w-20 md:w-40 -left-10 top-1/4 transform -rotate-45"
+        className="absolute h-[1px] bg-primary/15 w-16 md:w-40 -left-5 md:-left-10 top-1/4 transform -rotate-45"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.5 }}
       />
       <motion.div
-        className="absolute h-[1px] bg-primary/15 w-20 md:w-40 -right-10 top-1/3 transform rotate-45"
+        className="absolute h-[1px] bg-primary/15 w-16 md:w-40 -right-5 md:-right-10 top-1/3 transform rotate-45"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
@@ -85,7 +85,7 @@ const CTA = () => {
             transition={{ duration: 0.7 }}
           >
             {/* Decorative academic elements */}
-            <div className="absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-primary/40 rounded-tl-lg" />
+            <div className="absolute -top-2 md:-top-4 -left-2 md:-left-4 w-6 md:w-8 h-6 md:h-8 border-l-2 border-t-2 border-primary/40 rounded-tl-lg" />
             <div className="absolute -top-4 -right-4 w-8 h-8 border-r-2 border-t-2 border-primary/40 rounded-tr-lg" />
             <div className="absolute -bottom-4 -left-4 w-8 h-8 border-l-2 border-b-2 border-primary/40 rounded-bl-lg" />
             <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-primary/40 rounded-br-lg" />
