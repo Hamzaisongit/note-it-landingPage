@@ -64,17 +64,10 @@ const Hero = () => {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
               >
-                <div className="bg-background/50 py-3 px-4 border-b border-border flex items-center">
-                  <div className="flex space-x-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                </div>
                 <div className="p-4 md:p-6 lg:p-8">
                   {/* Large video placeholder area */}
                   <div className="aspect-video bg-background rounded-lg flex items-center justify-center placeholder-pulse">
-                    <video autoPlay loop muted playsInline playba playbackRate={2} className="w-full h-full object-cover rounded-lg">
+                    <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg">
                       <source src="/Note-it-demo-clip.mp4" type="video/mp4" />
                     </video>
                   </div>

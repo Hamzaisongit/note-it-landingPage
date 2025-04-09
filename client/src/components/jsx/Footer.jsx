@@ -15,8 +15,8 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
         <div className="flex items-center space-x-2">
-         <span className="text-3xl text-foreground">
-         📝
+          <span className="text-3xl text-foreground">
+            <img src="/favicon.png" alt="Note-it logo" className="h-10 w-10" />
           </span>
           <h1 className="text-xl font-bold text-foreground">Note-it</h1>
         </div>
