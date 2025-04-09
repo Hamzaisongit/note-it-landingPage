@@ -56,9 +56,6 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative w-full mx-auto">
-              <div className="absolute -top-6 -right-6 w-40 h-40 bg-teal-400 rounded-full opacity-20 blur-3xl"></div>
-              <div className="absolute -bottom-10 -left-6 w-40 h-40 bg-primary rounded-full opacity-20 blur-3xl"></div>
-              
               <motion.div 
                 className="relative w-full bg-card rounded-2xl shadow-xl overflow-hidden border border-border"
                 animate={{ y: [0, -10, 0] }}
