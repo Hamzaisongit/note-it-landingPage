@@ -46,24 +46,11 @@ const Hero = () => {
               A Chrome extension to track, organize, and save your notes effortlessly - all synced with Google Sheets.
             </motion.p>
             
-            <motion.div 
-              className="flex items-center justify-center space-x-4 mt-8"
-              variants={itemVariants}
-            >
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-card border-2 border-background flex items-center justify-center text-xs font-medium">JD</div>
-                <div className="w-8 h-8 rounded-full bg-card border-2 border-background flex items-center justify-center text-xs font-medium">AS</div>
-                <div className="w-8 h-8 rounded-full bg-card border-2 border-background flex items-center justify-center text-xs font-medium">MK</div>
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Trusted by <span className="font-semibold">10,000+</span> note takers
-              </div>
-            </motion.div>
           </motion.div>
           
           {/* Large Demo Video Area */}
           <motion.div 
-            className="w-full max-w-4xl"
+            className="w-full mt-5 max-w-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -83,23 +70,13 @@ const Hero = () => {
                     <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
                     <div className="w-3 h-3 rounded-full bg-green-400"></div>
                   </div>
-                  <div className="ml-4 py-1 px-3 rounded-md bg-card border border-border text-xs text-muted-foreground flex-grow text-center">
-                    chrome-extension://note-it
-                  </div>
                 </div>
                 <div className="p-4 md:p-6 lg:p-8">
                   {/* Large video placeholder area */}
                   <div className="aspect-video bg-background rounded-lg flex items-center justify-center placeholder-pulse">
-                    <div className="text-center px-4">
-                      <div className="w-20 h-20 bg-card rounded-full mx-auto flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <p className="mt-4 text-muted-foreground text-xl font-medium">Demo Video Placeholder</p>
-                      <p className="text-md text-muted-foreground mt-2">See Note-it in action</p>
-                    </div>
+                    <video autoPlay loop muted playsInline playba playbackRate={2} className="w-full h-full object-cover rounded-lg">
+                      <source src="/Note-it-demo-clip.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
               </motion.div>

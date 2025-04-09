@@ -13,7 +13,7 @@ const FeatureCard = ({ icon, title, description, colorClass, isReversed }) => {
           {React.cloneElement(icon, { className: "h-12 w-12 md:h-16 md:w-16" })}
         </div>
         
-        <div className={`flex-1 ${isReversed ? 'md:text-right' : 'md:text-left'} text-center`}>
+        <div className={`flex-1 text-justify`}>
           <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground">{title}</h3>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed">{description}</p>
         </div>
@@ -36,7 +36,7 @@ const Features = () => {
       id: 2,
       icon: <FolderKanban className="text-teal-400" />,
       title: "Makes note-taking organized and seamless",
-      description: "Stay organized effortlessly with smart categories and tags. Our intuitive interface makes sorting and finding your notes simple, so you can focus on what matters.",
+      description: "Stay organized effortlessly with our intuitive interface which makes finding your notes simple, so you can focus on what matters.",
       colorClass: "bg-teal-400/20",
       isReversed: true
     },

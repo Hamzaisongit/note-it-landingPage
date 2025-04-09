@@ -106,7 +106,7 @@ const CTA = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Join thousands of students and professionals who've revolutionized how they capture and organize information.
+              Start capturing, organizing, and accessing information in a new way with Note-it today!
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,8 @@ const CTA = () => {
               className="flex justify-center"
             >
               <motion.a
-                href="#features"
+                href="https://chromewebstore.google.com/detail/note-it/ialnbadijnahcjeflecdnkficehiohce" 
+                target="_blank"
                 className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-semibold py-4 px-10 rounded-lg shadow-lg shadow-primary/20 transition-all duration-200 text-lg"
                 whileHover={{
                   scale: 1.05,
